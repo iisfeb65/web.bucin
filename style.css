@@ -1,0 +1,177 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+section{
+padding:100px 10%;
+}
+
+#opening{
+height:100vh;
+background:url("foto2.jpg") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(3px);
+}
+
+.opening-content{
+position:relative;
+z-index:2;
+text-align:center;
+}
+
+.opening-content h1{
+font-size:3rem;
+font-family:'Cormorant Garamond';
+}
+
+.opening-content button{
+margin-top:20px;
+padding:14px 30px;
+background:white;
+border:none;
+cursor:pointer;
+border-radius:50px;
+}
+
+.hero{
+text-align:center;
+min-height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h2{
+font-size:4rem;
+font-family:'Cormorant Garamond';
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+margin-top:20px;
+opacity:.8;
+}
+
+.timeline{
+position:relative;
+}
+
+.timeline h2{
+text-align:center;
+margin-bottom:60px;
+font-size:3rem;
+}
+
+.line{
+position:absolute;
+left:50%;
+top:150px;
+width:3px;
+height:80%;
+background:#666;
+}
+
+.event{
+width:40%;
+background:#181818;
+padding:25px;
+margin:40px 0;
+border-radius:20px;
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+}
+
+.event.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.event:nth-child(even){
+margin-left:auto;
+}
+
+.gallery{
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:50px;
+}
+
+.grid img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:20px;
+opacity:0;
+transform:scale(.8);
+transition:1s;
+}
+
+.grid img.show{
+opacity:1;
+transform:scale(1);
+}
+
+.letter{
+text-align:center;
+max-width:700px;
+margin:auto;
+line-height:2;
+}
+
+#music{
+position:fixed;
+bottom:20px;
+right:20px;
+width:320px;
+z-index:999;
+}
+
+#interactive-love {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 100, 0.5));
+}
+
+#interactive-love:active {
+  transform: scale(0.7);
+}
+
+/* Partikel murni dikontrol oleh JS */
+.particle-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  user-select: none;
+  will-change: transform, opacity; /* Optimasi rendering browser */
+}
